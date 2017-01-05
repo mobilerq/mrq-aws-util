@@ -1,2 +1,2 @@
 # aws-util
-Helpers AWS java sdk
+Helpers for AWS java sdk
