@@ -8,6 +8,8 @@ import org.mockito.ArgumentCaptor
 import org.mockito.Matchers._
 import org.mockito.Mockito._
 
+import scala.collection.JavaConverters._
+
 class ListObjectIteratorTest {
 
   implicit val client = mock(classOf[AmazonS3])
@@ -44,7 +46,6 @@ class ListObjectIteratorTest {
 
   @Test
   def testIteration(): Unit = {
-    import scala.collection.JavaConverters._
     val first = {
       val r = new ObjectListing()
       r.setTruncated(true)

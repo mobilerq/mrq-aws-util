@@ -2,11 +2,13 @@ package com.example.awsutil.s3
 
 import com.amazonaws.services.s3.AmazonS3
 import com.amazonaws.services.s3.model.{ListObjectsV2Request, ListObjectsV2Result, S3ObjectSummary}
+import org.junit.Assert._
 import org.junit.Test
 import org.mockito.ArgumentCaptor
-import org.mockito.Mockito._
 import org.mockito.Matchers._
-import org.junit.Assert._
+import org.mockito.Mockito._
+
+import scala.collection.JavaConverters._
 
 class ListObjectV2IteratorTest {
 
@@ -45,7 +47,6 @@ class ListObjectV2IteratorTest {
 
   @Test
   def testIteration(): Unit = {
-    import scala.collection.JavaConverters._
     when(client.listObjectsV2(any(classOf[ListObjectsV2Request])))
       .thenReturn({
         val r = new ListObjectsV2Result()
