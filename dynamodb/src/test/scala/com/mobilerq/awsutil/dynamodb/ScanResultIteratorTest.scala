@@ -1,4 +1,4 @@
-package com.example.awsutil.dynamodb
+package com.mobilerq.awsutil.dynamodb
 
 import java.util.Collections
 

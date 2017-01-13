@@ -1,4 +1,4 @@
-package com.example.awsutil.dynamodb
+package com.mobilerq.awsutil.dynamodb
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB
 import com.amazonaws.services.dynamodbv2.model.{ScanRequest, ScanResult}
