@@ -5,7 +5,7 @@ import com.amazonaws.services.s3.model._
 import org.junit.Assert._
 import org.junit.Test
 import org.mockito.ArgumentCaptor
-import org.mockito.Matchers._
+import org.mockito.ArgumentMatchers._
 import org.mockito.Mockito._
 
 import scala.collection.JavaConverters._
@@ -13,8 +13,8 @@ import scala.collection.JavaConverters._
 class ListObjectIteratorTest {
 
   implicit val client = mock(classOf[AmazonS3])
-  val requestCaptor = ArgumentCaptor.forClass(classOf[ListObjectsRequest])
-  val nextRequestCaptor = ArgumentCaptor.forClass(classOf[ListNextBatchOfObjectsRequest])
+  val requestCaptor: ArgumentCaptor[ListObjectsRequest] = ArgumentCaptor.forClass(classOf[ListObjectsRequest])
+  val nextRequestCaptor: ArgumentCaptor[ListNextBatchOfObjectsRequest] = ArgumentCaptor.forClass(classOf[ListNextBatchOfObjectsRequest])
 
   @Test
   def testBucketConstructor(): Unit = {

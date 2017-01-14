@@ -7,14 +7,14 @@ import com.amazonaws.services.dynamodbv2.model.{AttributeValue, ScanRequest, Sca
 import org.junit.Assert._
 import org.junit.Test
 import org.mockito.ArgumentCaptor
-import org.mockito.Matchers._
 import org.mockito.Mockito._
+import org.mockito.ArgumentMatchers._
 
 import scala.collection.JavaConverters._
 
 class ScanResultIteratorTest {
   implicit val client = mock(classOf[AmazonDynamoDB])
-  val requestCaptor = ArgumentCaptor.forClass(classOf[ScanRequest])
+  val requestCaptor: ArgumentCaptor[ScanRequest] = ArgumentCaptor.forClass(classOf[ScanRequest])
 
   @Test
   def testIteration(): Unit = {
