@@ -8,19 +8,20 @@ lazy val root = (project in file(".")).
       organization := "com.mobilerq",
       version := "0.1.0-SNAPSHOT",
       scalaVersion := "2.12.1",
-      crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6")
+      crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6"),
+      autoAPIMappings := true
     )),
-    name := "aws-util"
+    name := "mrq-aws-util"
   )
 
 lazy val dynamodb = project.
   settings(
-    name := "aws-util-dynamodb",
+    name := "mrq-aws-util-dynamodb",
     libraryDependencies ++= testDeps :+ awsJavaSdkDynamodb
   )
 
 lazy val s3 = project.
   settings(
-    name := "aws-util-s3",
+    name := "mrq-aws-util-s3",
     libraryDependencies ++= testDeps :+ awsJavaSdkS3
   )
