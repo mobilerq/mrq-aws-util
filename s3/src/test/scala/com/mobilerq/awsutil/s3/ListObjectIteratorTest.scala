@@ -1,4 +1,4 @@
-package com.mobilrq.awsutil.s3
+package com.mobilerq.awsutil.s3
 
 import com.amazonaws.services.s3.AmazonS3
 import com.amazonaws.services.s3.model._
